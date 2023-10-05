@@ -5,21 +5,30 @@ import {  RiInstagramFill } from "react-icons/ri";
 import qZone1 from "../../assets/qZone1.png"
 import qZone2 from "../../assets/qZone2.png"
 import qZone3 from "../../assets/qZone3.png"
+import { useContext } from "react";
+import { AuthContext } from "../../Components/provider/AuthProvider";
 
 
 const RightSide = () => {
+
+    const {signInPopUp} = useContext(AuthContext)
+
+    const handleGoogleLogin = () =>{
+        signInPopUp()
+    }
+
     return (
         <div>
             <div className="p-4 space-y-6 mb-6">
                 <h2 className="text-2xl font-semibold">Login with</h2>
                 <div className="space-y-3">
-                    <button className="btn btn-outline w-full">
+                    <button onClick={handleGoogleLogin} className="btn btn-outline w-full">
                         <AiOutlineGoogle></AiOutlineGoogle>
                         Login with Google
                     </button>
                     <button className="btn btn-outline w-full">
                         <AiFillGithub></AiFillGithub>
-                        Login with Google
+                        Login with GitHub
                     </button>
                 </div>
             </div>

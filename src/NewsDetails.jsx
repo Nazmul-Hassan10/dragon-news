@@ -1,8 +1,16 @@
+// import { useEffect } from "react";
 import Header from "./pages/shared/Header";
 import Navbar from "./pages/shared/Navbar";
 import RightSide from "./pages/shared/RightSide";
 
-const NewsDetails = () => {
+const NewsDetails = ({aNews}) => {
+    console.log(aNews);
+
+    // useEffect(() => {
+    //     fetch('/data/news.json')
+    // }, [])
+
+
     return (
         <div>
             <Header></Header>

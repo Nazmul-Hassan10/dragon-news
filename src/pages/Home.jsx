@@ -5,6 +5,7 @@ import LeftSide from "./shared/LeftSide";
 import Navbar from "./shared/Navbar";
 import RightSide from "./shared/RightSide";
 import News from "../News";
+import NewsDetails from "../NewsDetails";
 
 const Home = () => {
     const news = useLoaderData()
