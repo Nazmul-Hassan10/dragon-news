@@ -19,6 +19,7 @@ const routes = createBrowserRouter([
             {
                 path: '/news/:id',
                 element: <PrivateRoute><NewsDetails></NewsDetails></PrivateRoute>,
+                loader: ()=> fetch('/data/news.json')
             },
             {
                 path: '/login',

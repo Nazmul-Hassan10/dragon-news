@@ -8,12 +8,12 @@ const News = ({ aNews }) => {
                 <div className="flex items-center space-x-4">
                     <div className="avatar">
                         <div className="w-14 rounded-full">
-                            <img src={author.img} />
+                            <img src={author?.img} />
                         </div>
                     </div>
                     <div>
-                        <h3 className="text-lg font-semibold">{author.name}</h3>
-                        <p>{author.published_date}</p>
+                        <h3 className="text-lg font-semibold">{author?.name}</h3>
+                        <p>{author?.published_date}</p>
                     </div>
                 </div>
                 <div className="flex gap-3">
@@ -35,7 +35,7 @@ const News = ({ aNews }) => {
                 <figure><img src={image_url} alt="Shoes" /></figure>
                 <div className="card-body">
                     {
-                        details.length > 200 ? <p className="text-lg">{details.slice(0, 200)}<Link to={`/news/${_id}`} className="text-pink-500 ml-3 font-semibold">Read more...</Link></p> : <p>{details}</p>
+                        details?.length > 200 ? <p className="text-lg">{details.slice(0, 200)}<Link to={`/news/${_id}`} className="text-pink-500 ml-3 font-semibold">Read more...</Link></p> : <p>{details}</p>
                     }
                 </div>
                 <div className="flex justify-between px-4 py-8">
@@ -48,7 +48,7 @@ const News = ({ aNews }) => {
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
                         </div>
                         <div>
-                            <p>{rating.number}</p>
+                            <p>{rating?.number}</p>
                         </div>
                     </div>
                     <div className="flex gap-3">

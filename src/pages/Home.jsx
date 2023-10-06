@@ -9,7 +9,6 @@ import NewsDetails from "../NewsDetails";
 
 const Home = () => {
     const news = useLoaderData()
-    console.log(news);
     return (
         <div>
             <Header></Header>
